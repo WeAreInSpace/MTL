@@ -2,7 +2,7 @@
 name = "mtl"
 version = "1.0.0"
 authors = [
-  { name="Internet Space", email="" },
+  { name="We Are In Space", email="weareinspace.net@gmail.com" }
 ]
 description = "A Tools that makes you easily write HTML in Python"
 readme = "README.md"

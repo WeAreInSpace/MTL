@@ -1,5 +1,5 @@
-import mtl.src.tags as tag
-import mtl.src.attribute as attr
+import tags as tag
+import attribute as attr
 
 class Page:
     def __init__(self, *components:str):
