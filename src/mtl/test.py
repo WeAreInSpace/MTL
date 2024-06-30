@@ -1,22 +1,77 @@
 from mtl import *
-from nav import *
 from flask import Flask
-import mtl.tags as t
+import mtl as t
+
+def Nav(props):
+    return pack(
+        nav(
+            ul(
+                li(h1("mtl", props=[className("mtl nav-icon")])),
+                li(a("Home", props=[href("#")])),
+            ),
+            ul(li(a("Login")), li(a("Register"))),
+            props=[
+                onClick("""console.log('Hello HTML In Python')"""),
+                className("MainNav"),
+                props,
+            ],
+        ),
+        styles(
+            """
+                    .MainNav {
+                        display: flex;
+                        align-items: center;
+                        gap: 15px;
+                        justify-content: space-between;
+                        background-color: rgba(255, 255, 255, 0.884);
+                        padding: 0px;
+                        border-radius: 10px;
+                        z-index: 9;
+                        font-family: "Nunito";
+                        padding: 16px;
+                        user-select: none;
+                        backdrop-filter: blur(15px);
+
+                        ul {
+                            display: flex;
+                            align-items: center;
+                            gap: 15px;
+
+                            li {
+                                list-style-type: none;
+
+                                a {
+                                    cursor: pointer;
+                                    font-size: 18px;
+                                    font-weight: 600;
+                                    text-decoration: none;
+                                    color: black;
+                                }
+                            }
+                        }
+                    }
+                """
+        ),
+    )
+
 
 def Poppins(kwrgs, *content):
-    return(t.htm(kwrgs, *content, props=[style("font-family: 'Poppins'")], ref=""))
+    return t.htm(kwrgs, *content, props=[style("font-family: 'Poppins'")], ref="")
+
 
 TestComp = div(
     Poppins("h1", "Test Component"),
     props=[
-        style("height: 50%; display: flex; align-items: center; justify-content: center;")
-    ]
+        style(
+            "height: 50%; display: flex; align-items: center; justify-content: center;"
+        )
+    ],
 )
 
 Home = pack(
     head(
         styles(
-            '''
+            """
                 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
                 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
                 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -75,31 +130,23 @@ Home = pack(
                     line-height: 1;
                     font-family: "lora";
                 }
-            ''',
-            '''
+            """,
+            """
                 a {
                 }
-            '''
+            """,
         ),
         script(
-            '''
+            """
                 function Hello() {
                     console.log('Hello HTML from Python')
                 }
-            '''
-        )
+            """
+        ),
     ),
     body(
-        div(
-            Nav(onClick("Hello()")),
-            TestComp,
-            props=[
-                className(
-                    "cont nav-cont-cont"
-                )
-            ]
-        )
-    )
+        div(Nav(onClick("Hello()")), TestComp, props=[className("cont nav-cont-cont")])
+    ),
 )
 
 f = open("doc.html", "a")

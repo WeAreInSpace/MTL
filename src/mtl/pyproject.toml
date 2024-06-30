@@ -1,0 +1,13 @@
+[project]
+name = "mtl"
+version = "1.0.0"
+authors = [
+  { name="Internet Space", email="" },
+]
+description = "A Tools that makes you easily write HTML in Python"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
