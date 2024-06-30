@@ -762,7 +762,7 @@ def onWaiting(props: str):
 def onWheel(props: str):
     return(attr.attr("onwheel", props))
 
-def open(props: str):
+def opens(props: str):
     return(attr.attr("open", props))
 
 def optimum(props: str):

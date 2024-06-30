@@ -27,7 +27,7 @@ def Nav(props):
                         a("Login")
                     ),
                     li(
-                        a("Reg")
+                        a("Register")
                     )
                 ),
                 props=[

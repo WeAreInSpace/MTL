@@ -75,11 +75,15 @@ Home = pack(
                     line-height: 1;
                     font-family: "lora";
                 }
+            ''',
+            '''
+                a {
+                }
             '''
         ),
         script(
             '''
-                funtion Hello() {
+                function Hello() {
                     console.log('Hello HTML from Python')
                 }
             '''
@@ -98,8 +102,7 @@ Home = pack(
     )
 )
 
-app = Flask(__name__)
-
-@app.route("/")
-def hello_world():
-    return Home
+f = open("doc.html", "a")
+f.truncate(0)
+f.write(Home)
+f.close()
