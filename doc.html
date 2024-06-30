@@ -1,4 +1,4 @@
-<head  ><style  >
+<head ><style >
                 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
                 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
                 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -57,41 +57,45 @@
                     line-height: 1;
                     font-family: "lora";
                 }
-            </style><script  >
+            
+                a {
+                    
+                }
+            </style><script >
                 function Hello() {
                     console.log('Hello HTML from Python')
                 }
-            </script></head><body  ><div  class="cont nav-cont-cont"  ><nav  onclick="console.log('Hello HTML In Python')"   class="MainNav"   onclick="Hello()"  ><ul  ><li  ><h1  class="mtl nav-icon"  >mtl</h1></li><li  ><a  href="#"  >Home</a></li></ul><ul  ><li  ><a  >Login</a></li><li  ><a  >Register</a></li></ul></nav><style  >
-                    .MainNav {
+            </script></head><body ><div  class="cont nav-cont-cont" ><nav  onclick="console.log('Hello HTML In Python')"  class="MainNav"  onclick="Hello()" ><ul ><li ><h1  class="mtl nav-icon" >mtl</h1></li><li ><a  href="#" >Home</a></li></ul><ul ><li ><a >Login</a></li><li ><a >Register</a></li></ul></nav><style >
+                .MainNav {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    justify-content: space-between;
+                    background-color: rgba(255, 255, 255, 0.884);
+                    padding: 0px;
+                    border-radius: 10px;
+                    z-index: 9;
+                    font-family: "Nunito";
+                    padding: 16px;
+                    user-select: none;
+                    backdrop-filter: blur(15px);
+
+                    ul {
                         display: flex;
                         align-items: center;
                         gap: 15px;
-                        justify-content: space-between;
-                        background-color: rgba(255, 255, 255, 0.884);
-                        padding: 0px;
-                        border-radius: 10px;
-                        z-index: 9;
-                        font-family: "Nunito";
-                        padding: 16px;
-                        user-select: none;
-                        backdrop-filter: blur(15px);
 
-                        ul {
-                            display: flex;
-                            align-items: center;
-                            gap: 15px;
+                        li {
+                            list-style-type: none;
 
-                            li {
-                                list-style-type: none;
-
-                                a {
-                                    cursor: pointer;
-                                    font-size: 18px;
-                                    font-weight: 600;
-                                    text-decoration: none;
-                                    color: black;
-                                }
+                            a {
+                                cursor: pointer;
+                                font-size: 18px;
+                                font-weight: 600;
+                                text-decoration: none;
+                                color: black;
                             }
                         }
                     }
-                </style><div  style="height: 50%; display: flex; align-items: center; justify-content: center;"  ><h1  style="font-family: 'Poppins'"  >Test Component</h1></div></div></body>
+                }
+            </style><div  style="height: 50%; display: flex; align-items: center; justify-content: center;" ><h1  style="font-family: 'Poppins'" >Test Component</h1></div><div  style="display: flex; " ><h1  style="font-family: 'Poppins'" >Test Components 1</h1><h1  style="font-family: 'Poppins'" >Test Components 2</h1></div><div ><a  style="font-family: 'Poppins'" ><a  href="https://www.weareinspace.net" >https://www.weareinspace.net</a></a></div></div></body>

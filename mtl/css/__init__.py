@@ -326,7 +326,7 @@ def placeContent(
         "space-around space-evenly",
         "space-evenly stretch",
         "stretch space-evenly",
-        global_value
+        global_value,
     ]
 ):
     return f"place-content: {value};"
@@ -348,7 +348,7 @@ def placeItems(
         "first baseline legacy",
         "last baseline normal",
         "stretch legacy",
-        global_value
+        global_value,
     ]
 ):
     return f"place-items: {value};"
@@ -370,7 +370,7 @@ def placeSelf(
         "first baseline auto",
         "last baseline normal",
         "stretch auto",
-        global_value
+        global_value,
     ]
 ):
     return f"place-self: {value};"

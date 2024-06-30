@@ -1,6 +1,8 @@
 from mtl import *
-from flask import Flask
-import mtl as t
+from mtl.css import *
+
+import mtl.tags as t
+
 
 def Nav(props):
     return pack(
@@ -18,39 +20,39 @@ def Nav(props):
         ),
         styles(
             """
-                    .MainNav {
+                .MainNav {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    justify-content: space-between;
+                    background-color: rgba(255, 255, 255, 0.884);
+                    padding: 0px;
+                    border-radius: 10px;
+                    z-index: 9;
+                    font-family: "Nunito";
+                    padding: 16px;
+                    user-select: none;
+                    backdrop-filter: blur(15px);
+
+                    ul {
                         display: flex;
                         align-items: center;
                         gap: 15px;
-                        justify-content: space-between;
-                        background-color: rgba(255, 255, 255, 0.884);
-                        padding: 0px;
-                        border-radius: 10px;
-                        z-index: 9;
-                        font-family: "Nunito";
-                        padding: 16px;
-                        user-select: none;
-                        backdrop-filter: blur(15px);
 
-                        ul {
-                            display: flex;
-                            align-items: center;
-                            gap: 15px;
+                        li {
+                            list-style-type: none;
 
-                            li {
-                                list-style-type: none;
-
-                                a {
-                                    cursor: pointer;
-                                    font-size: 18px;
-                                    font-weight: 600;
-                                    text-decoration: none;
-                                    color: black;
-                                }
+                            a {
+                                cursor: pointer;
+                                font-size: 18px;
+                                font-weight: 600;
+                                text-decoration: none;
+                                color: black;
                             }
                         }
                     }
-                """
+                }
+            """
         ),
     )
 
@@ -66,6 +68,38 @@ TestComp = div(
             "height: 50%; display: flex; align-items: center; justify-content: center;"
         )
     ],
+)
+
+TestComp2 = pack(
+    div(
+        Poppins(
+            "h1",
+            "Test Components 1"
+        ),
+        Poppins(
+            "h1",
+            "Test Components 2"
+        ),
+        props=[
+            style(
+                useMtlCss([
+                    dis("flex"),
+                ]),
+
+            )
+        ]
+    ),
+    div(
+        Poppins(
+            "a",
+            a(
+                "https://www.weareinspace.net",
+                props=[
+                    href("https://www.weareinspace.net")
+                ]
+            )
+        )
+    )
 )
 
 Home = pack(
@@ -133,6 +167,7 @@ Home = pack(
             """,
             """
                 a {
+                    
                 }
             """,
         ),
@@ -145,7 +180,14 @@ Home = pack(
         ),
     ),
     body(
-        div(Nav(onClick("Hello()")), TestComp, props=[className("cont nav-cont-cont")])
+        div(
+            Nav(onClick("Hello()")),
+            TestComp,
+            TestComp2,
+            props=[
+                className("cont nav-cont-cont")
+            ]
+        )
     ),
 )
 

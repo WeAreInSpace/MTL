@@ -1,8 +1,0 @@
-LICENSE.md
-README.md
-pyproject.toml
-css/src/__init__.py
-mtl.egg-info/PKG-INFO
-mtl.egg-info/SOURCES.txt
-mtl.egg-info/dependency_links.txt
-mtl.egg-info/top_level.txt
