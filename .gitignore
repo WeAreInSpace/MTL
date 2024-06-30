@@ -1,5 +1,10 @@
 /__pycache__
 /css/__pycache__
 /dist
-/MTL.egg-info
+/mtlhtml.egg-info
 /.venv
+/build
+/.pypirc
+
+tokens.txt
+setup.py
